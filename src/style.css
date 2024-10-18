@@ -1,0 +1,15 @@
+.menu:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+li {
+  font-size: 2vw;
+}
+
+code,pre {
+  color: #FF00FF;
+  
+}
+

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Code-Quiz (Learn to read code)</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container-fluid p-5 bg-primary text-white text-center">
+  <header>
+    <h1>Code-Quiz</h1>
+    <p>Learn to read code. We use pseudo code as the "programming language". </p>
+  </header>
+</div>
+
+<!-- navigation -->
+<nav>
+  <div class="container border">
+    <ul class="nav nav-pills">
+      <li class="active menu" id="menu0">Home &nbsp</li>
+      <li class="active menu" id="menu1">1 &nbsp</li>
+      <li class="active menu" id="menu2">2 &nbsp</li>
+      <li class="active menu" id="menu3">3 &nbsp</li>
+      <li class="active menu" id="menu4">4 &nbsp</li>
+      <li class="active menu" id="menu5">5 &nbsp</li>
+      <li class="active menu" id="menu6">6 &nbsp</li>
+    </ul>
+  </div>
+</nav>
+<br>
+<br>
+<div class="container output" id="about">
+  <article>
+    <section>
+      <header>
+        <h1>Why this project?</h1>
+      </header>
+      <br>
+      <p>In development practice, being able to read and understand code is an extremely important skill.
+        You can also develop yourself further by reading code. This small project should offer the opportunity to train this skill. </p>
+      <p><u>I am of the opinion </u> that reading code does not necessarily depend on the programming language you use!
+        Once you have learnt this skill, it should be no problem to switch to the respective programming language. In this project we use a very general programming language, namely pseudo code. This is because, in principle, everyone brings their own programming language with them. And in order to be on the same level as far as possible, the generalisation pseudocode is a good option. </p>
+      <p>In the tab above, you can get started straight away and select the relevant problem set. For example problem set 1</p>
+
+</div>
+</section>
+</article>
+
+<!-- first problem set -->
+<div class="container p-3 my-3 border output" id="problem1">
+  <header>
+    <p> Problem 1 </p>
+  </header>
+  <p> Iterate up to and including ‘n’. </p>
+  <main>
+    <code>
+      1: &nbsp s := 0
+      <br>
+      2: &nbsp for i := 1 to n
+      <br>
+      3: &nbsp &nbsp s := s + i
+      <br>
+      4: &nbsp endfor
+      <br>
+      5: &nbsp print s
+    </code>
+  </main>
+  <br><br>
+  <section>
+    <form>
+      <p>Which value is output for (n=5) in line 5?</p>
+      <!-- solution1 -->
+      <div>
+        <input type="checkbox" class="p1" />
+        <label for="scales">20</label>
+      </div>
+      <!-- solution 2 -->
+      <div>
+        <input type="checkbox" class="p1 p1s" />
+        <label for="scales">15</label>
+      </div>
+      <!-- solution 3 -->
+      <div>
+        <input type="checkbox" class="p1" />
+        <label for="scales">12</label>
+      </div>
+      <br>
+      <code>
+        1: &nbsp s = n*(n+1) / 2
+        <br>
+        2: &nbsp print s
+      </code>
+      <br>
+      <br>
+      <p>What value is output for (n=5) in line 2?</p>
+      <div>
+        <input type="checkbox" class="p1 p1s" />
+        <label>15</label>
+      </div>
+      <div>
+        <input type="checkbox" class="p1" />
+        <label>12</label>
+      </div>
+      <br>
+      <button class="btn btn-primary" type="button" id="p1-button">Check</button>
+      <button class="btn btn-primary" type="button" id="p1-button-solution">Solution</button>
+      <button class="btn btn-primary" type="button" id="spoiler-button-p1">Spoiler</button>
+    </form>
+  </section>
+  <br>
+
+  <!-- spoiler division -->
+  <footer>
+    <div class="alert alert-primary" role="alert" id="spoiler-p1">
+      <p>
+        As you can see, the above code (with for-loop, O(n)) can be reduced to a single statement. O(1)
+      </p>
+    </div>
+  </footer>
+</div>
+
+<!-- second problem set -->
+<div class="container p-3 my-3 border output" id="problem2">
+  <header>
+    <p> Problem 2 </p>
+  </header>
+  <main>
+    <code>
+      1: &nbsp x := 0
+      <br>
+      2: &nbsp y := 1
+      <br>
+      3: &nbsp y := y * x
+      <br>
+      4: &nbsp print (x + y)
+    </code>
+  </main>
+  <br>
+  <br>
+  <p>What is the output in line 4 ?</p>
+  <section>
+    <form>
+      <div>
+        <input type="checkbox" class="p2" />
+        <label>1</label>
+      </div>
+      <div>
+        <input type="checkbox" class="p2 p2s" />
+        <label>0</label>
+      </div>
+      <div>
+        <input type="checkbox" class="p2" />
+        <label>2</label>
+      </div>
+      <br>
+      <button class="btn btn-primary" type="button" id="p2-button">Check</button>
+      <button class="btn btn-primary" type="button" id="p2-button-solution">Solution</button>
+    </form>
+  </section>
+</div>
+<!-- end problem 2 -->
+
+<!-- 3. problem set -->
+<div class="container p-3 my-3 border output" id="problem3">
+  <header>
+    <p>Problem 3 </p>
+  </header>
+  <p>The function below calculates the square root of a number x.
+    Read through the function. And decide whether the function would work or not? If you are of the opinion that the function does not work, then reprogramme it!</p>
+  <main>
+    <code>
+      1: &nbsp function sqrt(x)
+      <br>
+      2: &nbsp &nbsp ans := 0.0
+      <br>
+      3: &nbsp &nbsp step := 0.001
+      <br>
+      4: &nbsp &nbsp const EPSILON := 0.001
+      <br>
+      5: &nbsp &nbsp while (x - ans^2) > EPSILON do
+      <br>
+      6: &nbsp &nbsp &nbsp ans := ans + step
+      <br>
+      7: &nbsp &nbsp endwhile
+      <br>
+      8: &nbsp &nbsp return ans
+      <br>
+      9: &nbsp endfunction
+    </code>
+  </main>
+  <br>
+  <br>
+  <section>
+    <form>
+      <div>
+        <input type="checkbox" class="p3 p3s" />
+        <label>Works!</label>
+      </div>
+      <div>
+        <input type="checkbox" class="p3" />
+        <label>Does not work!</label>
+      </div>
+      <br>
+      <p>What is the role of EPSILON?</p>
+      <div>
+        <input type="checkbox" class="p3" />
+        <label>Is important for calculating the root of x. A mathematical constant.</label>
+      </div>
+      <div>
+        <input type="checkbox" class="p3 p3s" />
+        <label>So that we can compare the calculation result with the original value x. And that we can determine an accuracy of the algorithm. </label>
+      </div>
+      <br>
+      <button class="btn btn-primary" type="button" id="p3-button">Check</button>
+      <button class="btn btn-primary" type="button" id="p3-button-solution">Solution</button>
+    </form>
+  </section>
+
+</div>
+<!-- end 3. problem set -->
+
+<!-- problem set 4 ---->
+<div class="container p-3 my-3 border output" id="problem4">
+  <header>
+    <p>Problem 4</p>
+  </header>
+  <p>This function implements the <span title="Binary search is an efficient algorithm for finding an item from a sorted list of items. O(log n)"><u>binary search</u> </span>. The array is indexed starting from index 0! </p>
+  <main>
+    <code>
+      1: &nbsp function bsearch(arr,x)
+      <br>
+      2: &nbsp &nbsp l := 0
+      <br>
+      3: &nbsp &nbsp r := size(arr) - 1
+      <br>
+      4: &nbsp &nbsp m := (r+l) / 2
+      <br>
+      5: &nbsp &nbsp while r != l do
+      <br>
+      6: &nbsp &nbsp &nbsp &nbsp if arr[m] == x
+      <br>
+      7: &nbsp &nbsp &nbsp &nbsp &nbsp return true
+      <br>
+      8: &nbsp &nbsp &nbsp &nbsp else if arr[m] > x
+      <br>
+      9: &nbsp &nbsp &nbsp &nbsp &nbsp r := m - 1
+      <br>
+      10: &nbsp &nbsp &nbsp &nbsp &nbsp m := (r+l) / 2
+      <br>
+      11: &nbsp &nbsp &nbsp &nbsp else if arr[m] < x: <br>
+        12: &nbsp &nbsp &nbsp &nbsp &nbsp l := m + 1
+        <br>
+        13: &nbsp &nbsp &nbsp &nbsp &nbsp m := (r+l) / 2
+        <br>
+        14: &nbsp &nbsp &nbsp &nbsp endif
+        <br>
+        15: &nbsp &nbsp endwhile
+        <br>
+        16: &nbsp &nbsp if arr[r] == x then
+        <br>
+        16: &nbsp &nbsp &nbsp return true
+        <br>
+        17: &nbsp &nbsp endif
+        <br>
+        18: &nbsp &nbsp return false
+    </code>
+  </main>
+  <br>
+  <br>
+  <p> Given the array <b>arr := [1, 9 , 3 , 2 , 0] </b></p>
+  <p> What is the result for <b><i>bsearch(arr, 9) </b></i> ? </p>
+  <br>
+  <section>
+    <form>
+      <div>
+        <input type="checkbox" class="p4" />
+        <label>True</label>
+      </div>
+      <div>
+        <input type="checkbox" class="p4 p4s" />
+        <label>False</label>
+      </div>
+      <br>
+      <button class="btn btn-primary" type="button" id="p4-button">Check</button>
+      <button class="btn btn-primary" type="button" id="p4-button-solution">Solution</button>
+      <button class="btn btn-primary" type="button" id="spoiler-button-p4">Spoiler</button>
+    </form>
+  </section>
+  <br>
+  <footer>
+    <div class="alert alert-primary" role="alert" id="spoiler-p4">
+      <p>
+        The binary search is based on the fact that the input array is sorted! Can you see in the code above that the function sorts the array?
+      </p>
+      <p>If you were to call arr.sort() first. Then the bsearch(...) function would work as expected. </p>
+      <p> Maybe it will help you to write the function in your programming language!</p>
+    </div>
+  </footer>
+</div>
+<!-- end problem set 4 -->
+
+<!-- problem set 5 -->
+<section>
+  <div class="container p-3 my-3 border output" id="problem5">
+    <header>
+      <p>Problem 5</p>
+    </header>
+    <main>
+      <pre>
+  <code>
+  1:    x := 1
+  2:    y := 1
+
+  3:    if x < y then
+  4:      tmp := x
+  5:      x := y
+  6:      y := tmp
+  7:    else if y < x then
+  8:      x := x - y
+  9:    else
+  10:     print("error!")
+
+  11:   print(x) print(y)
+ </code>
+      </pre>
+    </main>
+    <section>
+      <br>
+      <p> What is output in line 11? </p>
+      <form>
+        <div>
+          <input type="checkbox" class="p5" />
+          <label>0 1</label>
+        </div>
+        <div>
+          <input type="checkbox" class="p5 p5s" />
+          <label>1 0</label>
+        </div>
+        <br>
+        <p>When is ‘error!’ output?</p>
+
+        <div>
+          <input type="checkbox" class="p5" />
+          <label>For x > y</label>
+        </div>
+        <div>
+          <input type="checkbox" class="p5" />
+          <label>For x < y</label>
+        </div>
+        <div>
+          <input type="checkbox" class="p5 p5s" />
+          <label>For x = y </label>
+        </div>
+        <br>
+        <button class="btn btn-primary" type="button" id="p5-button">Check</button>
+        <button class="btn btn-primary" type="button" id="p5-button-solution">Solution</button>
+      </form>
+    </section>
+  </div>
+</section>
+<!-- end problem set 5 -->
+
+<!-- problem set 6 -->
+<section>
+  <div class="container p-3 my-3 border output" id="problem6">
+
+    <p>Problem 6 </p>
+    <p> </p>
+    <main>
+      <pre>
+<code>
+1:  function f(a,b)
+2:      y := a
+3:      while b > 0 do
+4:          y := y + 1
+5:          b := b - 1
+6:      end
+7:      return y
+8:  endfunction
+</code>
+</pre>
+    </main>
+    <p> For <code>a := 3 </code> and <code>b := 5</code> what will the function return? </p>
+    <form>
+      <div>
+        <input type="checkbox" class="p6" />
+        <label>7</label>
+      </div>
+      <div>
+        <input type="checkbox" class="p6" />
+        <label>Infinite loop</label>
+      </div>
+      <div>
+        <input type="checkbox" class="p6 p6s" />
+        <label>8</label>
+      </div>
+      <div>
+        <input type="checkbox" class="p6" />
+        <label>15</label>
+      </div>
+      <br>
+      <button class="btn btn-primary" type="button" id="p6-button">Check</button>
+      <button class="btn btn-primary" type="button" id="p6-button-solution">Solution</button>
+    </form>
+  </div>
+</section>
+<!-- end problem set 6 -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
